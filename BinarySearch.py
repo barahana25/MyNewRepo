@@ -3,17 +3,16 @@ x = input('Input a number: ')
 left = 0
 right = len(a) - 1
 
-# Find x in the list a
 while left <= right:
     middle = (left + right) // 2
   
-    if a[middle] == int(x):  # Success
-        print('There is {:3} at a[{:2}] in the list.'.format(x, middle))
+    if a[middle] == int(x):
+        print('리스트 a[{:2}]에 {:3}가 있습니다.'.format(middle, x))
         break   
     elif a[middle] < int(x):
         left = middle + 1    
     else:
         right = middle - 1
 
-if left > right: # Fail
-    print('There is not {:3} in this list.'.format(x))
+if left > right:
+    print('리스트에 {:3}가 없습니다.'.format(x))
